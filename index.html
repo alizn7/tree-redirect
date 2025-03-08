@@ -3,45 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="3; url=https://ahk1384.github.io/Trees-CE03/">
-    <title>Redirecting...</title>
+    <title>در حال انتقال...</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5c6bc0, #42a5f5);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #333;
-        }
-        .container {
+            color: white;
             text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px 50px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
         h1 {
-            font-size: 24px;
-            color: #2d9cdb;
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
+
         p {
-            font-size: 16px;
-            margin: 20px 0;
-        }
-        a {
             font-size: 18px;
-            color: #2d9cdb;
-            text-decoration: none;
-            border: 2px solid #2d9cdb;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
+
+        a {
+            font-size: 20px;
+            color: #42a5f5;
+            text-decoration: none;
+            border: 2px solid #42a5f5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
         a:hover {
-            background-color: #2d9cdb;
+            background-color: #42a5f5;
             color: #fff;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
